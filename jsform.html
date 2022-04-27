@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jsform</title>
+  </head>
+  <body>
+    <!-- <form id="form"> -->
+    <h1>hi Js</h1>
+    <div class="field">
+      <label for="number">Age:</label>
+      <input type="number" id="age" placeholder="Enter your Age" />
+      <small></small>
+    </div>
+    <div class="field">
+      <label for="weight">weight:</label>
+      <input
+        type="text"
+        id="kg"
+        name="weight"
+        placeholder="Enter your weight"
+      />
+    </div>
+    <button type="submit" onclick="check()">submit</button>
+    <!-- </form> -->
+    <script>
+      function check() {
+        var age = parseInt(document.getElementById("age").value);
+        var weight = parseInt(document.getElementById("kg").value);
+        display(age, weight);
+      }
+      function display(age, weight) {
+        if (age >= 5 && age <= 7) {
+          if (weight >= 15 && weight <= 20) {
+            alert("You are in recommanded range");
+          } else if (weight < 15) {
+            alert("You are in under-weighted");
+          } else {
+            alert("You are in over-weighted");
+          }
+        } else if (age >= 8 && age <= 10) {
+          if (weight >= 21 && weight <= 25) {
+            alert("You are in recommanded range");
+          } else if (weight < 21) {
+            alert("You are in under-weighted");
+          } else {
+            alert("You are in over-weighted");
+          }
+        } else if (age >= 11 && age <= 15) {
+          if (weight >= 26 && weight <= 30) {
+            alert("You are in recommanded range");
+          } else if (weight < 26) {
+            alert("You are in under-weighted");
+          } else {
+            alert("You are in over-weighted");
+          }
+        } else if (age >= 16 && age <= 20) {
+          if (weight >= 31 && weight <= 40) {
+            alert("You are in recommanded range");
+          } else if (weight < 31) {
+            alert("You are in under-weighted");
+          } else {
+            alert("You are in over-weighted");
+          }
+        }
+        else{
+          alert("Invalid input");
+        }
+      }
+    </script>
+  </body>
+</html>
